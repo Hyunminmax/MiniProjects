@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" modified="2024-02-19T15:36:09.066Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="svMj0ZQHLZQOIfsOIU5F" version="23.1.5" type="google">
+  <diagram name="Page-1" id="2ca16b54-16f6-2749-3443-fa8db7711227">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qVjWGEyqw6IPw_FK09M--2" value="판매처" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="250" width="160" height="120" as="geometry">
+            <mxRectangle x="490" y="135" width="80" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--3" value="판매처번호(PK)&lt;br&gt;판매처명&lt;br&gt;출판사번호(FK)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="qVjWGEyqw6IPw_FK09M--2">
+          <mxGeometry y="35" width="160" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--8" value="출판사" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="130" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--9" value="출판사번호(PK)&lt;br&gt;출판사명&lt;br&gt;ISBN (FK)&lt;br&gt;판매처번호(FK)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="qVjWGEyqw6IPw_FK09M--8">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--10" value="작가" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="500" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--11" value="작가번호(PK)&lt;br&gt;작가명&lt;br&gt;ISBN(FK)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="qVjWGEyqw6IPw_FK09M--10">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--12" value="도서" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="222.5" width="160" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--13" value="ISBN(PK)&lt;br&gt;제목&lt;br&gt;작가번호(FK)&lt;br&gt;출판사(FK)&lt;br&gt;정가" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="qVjWGEyqw6IPw_FK09M--12">
+          <mxGeometry y="50" width="160" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--16" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;rounded=0;exitX=1.019;exitY=0.371;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="qVjWGEyqw6IPw_FK09M--9" target="qVjWGEyqw6IPw_FK09M--13">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="300" y="425" as="sourcePoint" />
+            <mxPoint x="400" y="325" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--19" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;startArrow=ERzeroToMany;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.019;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qVjWGEyqw6IPw_FK09M--3" target="qVjWGEyqw6IPw_FK09M--9">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="470" y="495" as="sourcePoint" />
+            <mxPoint x="570" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--21" value="판매순위" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="405" width="160" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--22" value="순위번호(PK)&lt;br&gt;ISBN(FK)&lt;br&gt;판매처번호(FK)&lt;br&gt;판매처별순위&lt;br&gt;판매처합산점수&lt;br&gt;순위수집날짜" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="qVjWGEyqw6IPw_FK09M--21">
+          <mxGeometry y="50" width="160" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--25" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qVjWGEyqw6IPw_FK09M--13" target="qVjWGEyqw6IPw_FK09M--22">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="470" y="495" as="sourcePoint" />
+            <mxPoint x="570" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qVjWGEyqw6IPw_FK09M--26" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qVjWGEyqw6IPw_FK09M--3" target="qVjWGEyqw6IPw_FK09M--21">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="110" y="460" as="sourcePoint" />
+            <mxPoint x="210" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MbhKPAQph5qlsE4CJsqf-1" value="도서작가" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="335" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MbhKPAQph5qlsE4CJsqf-2" value="ISBN(FK)&lt;br&gt;작가번호(FK)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="MbhKPAQph5qlsE4CJsqf-1">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MbhKPAQph5qlsE4CJsqf-3" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERoneToMany;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qVjWGEyqw6IPw_FK09M--13" target="MbhKPAQph5qlsE4CJsqf-2">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="680" y="595" as="sourcePoint" />
+            <mxPoint x="780" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MbhKPAQph5qlsE4CJsqf-4" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERoneToMany;rounded=0;exitX=1.006;exitY=0.4;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;exitPerimeter=0;entryX=0;entryY=0.643;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qVjWGEyqw6IPw_FK09M--11" target="MbhKPAQph5qlsE4CJsqf-2">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="680" y="632.5" as="sourcePoint" />
+            <mxPoint x="1020" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="970" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
