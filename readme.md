@@ -31,10 +31,10 @@
 ### MiniProject TimeTable
 ![](./Mini_Project_2/source/MiniProject2_Crawling.drawio.png)
 
-### System Flowchart
+### System FlowChart
 ![](./Mini_Project_2/source/MiniProject2_System_Flow.drawio.png)
 
-## 24-02-19 작성 *08일 약혼자의 외할아버지 장례식 상주 역할로 일정이 지연 됨.
+## 24-02-19 작성 *02-08~12 약혼자의 외할아버지 장례식 상주 역할로 일정이 지연 됨.
 
 ### Logical ERD
 ![](./Mini_Project_2/source/prepare_to_Crawling/ERD_Logic.drawio.png)
