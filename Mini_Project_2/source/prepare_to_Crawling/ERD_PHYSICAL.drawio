@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-19T15:40:41.115Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="2UO75uedaofYbwezgAw5" version="23.1.5" type="google">
+<mxfile host="app.diagrams.net" modified="2024-02-20T07:28:27.048Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="qeNcwEoQdn2zTjOU2zj7" version="23.1.5" type="google">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -7,13 +7,13 @@
         <mxCell id="mALQML_e7b65MymtvW4y-107" value="MARKET" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="20" y="220" width="210" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="mALQML_e7b65MymtvW4y-109" value="MARKET_ID: INT&lt;br&gt;MARKET_NAME: VARCHAR(30)&lt;br&gt;PUBLISHER_ID: INT" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="mALQML_e7b65MymtvW4y-107">
+        <mxCell id="mALQML_e7b65MymtvW4y-109" value="MARKET_ID: INT&lt;br&gt;MARKET_NAME: VARCHAR(30)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="mALQML_e7b65MymtvW4y-107">
           <mxGeometry y="26" width="210" height="64" as="geometry" />
         </mxCell>
         <mxCell id="mALQML_e7b65MymtvW4y-111" value="PUBLISHER" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="330" y="50" width="220" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="mALQML_e7b65MymtvW4y-112" value="PUBLISHER_ID: INT&lt;br&gt;PUBLISHER_NAME: VARCHAR(50)&lt;br&gt;ISBN: VARCHAR(13)&lt;br&gt;MARKET_ID: INT" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="mALQML_e7b65MymtvW4y-111">
+        <mxCell id="mALQML_e7b65MymtvW4y-112" value="PUBLISHER_ID: INT&lt;br&gt;PUBLISHER_NAME: VARCHAR(50)&lt;br&gt;ISBN: VARCHAR(13)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="mALQML_e7b65MymtvW4y-111">
           <mxGeometry y="26" width="220" height="114" as="geometry" />
         </mxCell>
         <mxCell id="mALQML_e7b65MymtvW4y-115" value="SALES_RANK" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
@@ -39,12 +39,6 @@
         </mxCell>
         <mxCell id="mALQML_e7b65MymtvW4y-128" value="AUTHOR_ID: INT&lt;br&gt;&lt;div&gt;ISBN: VARCHAR(13)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="mALQML_e7b65MymtvW4y-127">
           <mxGeometry y="26" width="210" height="84" as="geometry" />
-        </mxCell>
-        <mxCell id="mALQML_e7b65MymtvW4y-129" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;startArrow=ERzeroToMany;rounded=0;exitX=1.01;exitY=0.354;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.006;entryY=0.323;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mALQML_e7b65MymtvW4y-109" target="mALQML_e7b65MymtvW4y-112">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <mxPoint x="460" y="520" as="sourcePoint" />
-            <mxPoint x="560" y="420" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="mALQML_e7b65MymtvW4y-130" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=1.006;exitY=0.745;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mALQML_e7b65MymtvW4y-109" target="mALQML_e7b65MymtvW4y-116">
           <mxGeometry width="100" height="100" relative="1" as="geometry">

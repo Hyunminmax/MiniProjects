@@ -34,22 +34,25 @@
 ### System FlowChart
 ![](./Mini_Project_2/source/MiniProject2_System_Flow.drawio.png)
 
-## 24-02-19 작성 *02-08~12 약혼자의 외할아버지 장례식 상주 역할로 일정이 지연 됨.
+## 24-02-19 작성 *02-08~12 장례식 상주 역할로 일정이 지연 됨.
 
 ### Logical ERD
 ![](./Mini_Project_2/source/prepare_to_Crawling/ERD_Logic.drawio.png)
+24.02.20 판매처와 출판사 간의 관계 삭제
 
 ### Physical ERD
 ![](./Mini_Project_2/source/prepare_to_Crawling/ERD_PHYSICAL.drawio.png)
+24.02.20 MARKET과 PUBLISHER 간의 관계 삭제
+24.02.20 DB의 Insert 기준이 되는 판매처는 알라딘
 
 ### 대상 사이트 확정
 광고, 예약, 다른물품이 없고 월간 베스트 20이상을 지원하는 사이트를 대상으로 함  
-- Yes24
-link : https://www.yes24.com/Product/Category/MonthWeekBestSeller?categoryNumber=001
+- Yes24  
+  https://www.yes24.com/Product/Category/MonthWeekBestSeller?categoryNumber=001
 
-- 교보문고
-link : https://product.kyobobook.co.kr/bestseller/total?period=003#?page=1&per=20&period=003&ymw=&bsslBksClstCode=A
+- 교보문고  
+  https://product.kyobobook.co.kr/bestseller/total?period=003#?page=1&per=20&period=003&ymw=&bsslBksClstCode=A
 
-- 알라딘
-link : https://www.aladin.co.kr/shop/common/wbest.aspx?BranchType=1&BestType=MonthlyBest
+- 알라딘*  
+  https://www.aladin.co.kr/shop/common/wbest.aspx?BranchType=1&BestType=MonthlyBest
 
