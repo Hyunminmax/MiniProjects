@@ -1,7 +1,5 @@
 # Mini Project 2 : 웹스크래핑
 
-## 24-02-07 작성
-
 ## 어떤 서비스를 만들것인가?
     두 곳 이상의 사이트에서 정보를 취합해 정리해서 보여주는 서비스.
 ## 정보를 취합하는 방식은 정기적으로 크롤링을 해서 DB에 넣어두는 방식
@@ -37,11 +35,11 @@
 ## 24-02-19 작성 *02-08~12 장례식 상주 역할로 일정이 지연 됨.
 
 ### Logical ERD
-![](./Mini_Project_2/source/prepare_to_Crawling/ERD_Logic.drawio.png)
+![](./Mini_Project_2/source/prepare_to_Crawling/ERD_Logic.drawio.png)  
 24.02.20 판매처와 출판사 간의 관계 삭제
 
 ### Physical ERD
-![](./Mini_Project_2/source/prepare_to_Crawling/ERD_PHYSICAL.drawio.png)
+![](./Mini_Project_2/source/prepare_to_Crawling/ERD_PHYSICAL.drawio.png)  
 24.02.20 MARKET과 PUBLISHER 간의 관계 삭제
 24.02.20 DB의 Insert 기준이 되는 판매처는 알라딘
 
