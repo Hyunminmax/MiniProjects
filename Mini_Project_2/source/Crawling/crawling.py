@@ -145,8 +145,38 @@ def aladin_crawling():
         title = soup.select_one('.Ere_bo_title').get_text()
         onlinePrice = soup.select_one('.Ere_fs24').get_text()
         author = soup.select_one('.tlist > ul > li:nth-of-type(3) > a').get_text()
-        # author_detail = soup.select_one('.author_box > .introduction_nopic').get_text()
-        author_detail = soup.select_one('.author_box').get_text()
+        # author_detail = soup.select_one('.introduction_nopic > div > a').get_text()
+        # # author_detail1 = soup.find('div', {'class': 'introduction_nopic'})
+        # # author_detail1 = soup.find('div', {'class': 'introduction'})
+        # if author_detail == None:
+        #     author_detail = soup.find('div', {'class': 'introduction'})
+        #     print("a")
+        # print("b")
+        # print(type(author_detail))
+        # author_detail1 = soup.find_all('div', {'class': 'introduction_nopic'})
+        # if author_detail1 == None:
+        #     print("a")
+            # author_detail1 = soup.find_all('div', {'class':'introduction'})
+
+        
+        # print(type(author_detail1))
+        # print(dir(author_detail1[0]))
+
+        author_detail1 = soup.select_one('div.introduction_nopic > div > a').get_text()
+        
+
+        
+        
+
+
+        # print(type(author_detail1))
+        # author_detail2 = author_detail1.find_all('div')[0]
+        # # author_detail3 = author_detail2.find_all('a')[0].text
+        # print('bb')
+        # print(author_detail3)
+        # print(author_detail3.text)
+        
+        print('cc')
 
         if '(옮긴이)' in soup.select_one('.tlist > ul > li:nth-of-type(3)').get_text():
             publisher = soup.select_one('.tlist > ul > li:nth-of-type(3) > a:nth-of-type(3)').get_text()
@@ -161,7 +191,7 @@ def aladin_crawling():
         print(title)
         print(onlinePrice)
         print(author)
-        print(author_detail)
+        print(author_detail1)
         print(publisher)
         print(store)
         print(store_rank)
@@ -170,6 +200,6 @@ def aladin_crawling():
 
 # yes24_crawling()
 # kyobo_crawling()
-# aladin_crawling()
+aladin_crawling()
 # 크롬드라이버 종료
 driver.quit() 
