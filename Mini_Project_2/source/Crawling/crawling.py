@@ -1,5 +1,6 @@
 import  time
 from    selenium        import  webdriver
+from    selenium.webdriver.common.action_chains import  ActionChains
 from    bs4             import  BeautifulSoup
 # req = requests.get(url)
 # req = requests.get(url, verify=False) SSL 오류가 발생하는 경우 회피 방법
@@ -117,8 +118,7 @@ def aladin_crawling():
 
 
     driver.get(url)
-    time.sleep(2)
-
+    time.sleep(1)
     html = driver.page_source
 
     soup = BeautifulSoup(html, "html.parser")
@@ -133,7 +133,11 @@ def aladin_crawling():
         url = i['href']
         print(url)
         driver.get(url)
-        time.sleep(3)
+        time.sleep(1)
+        driver.execute_script("window.scrollTo(0, 3000);")
+        time.sleep(1)
+        driver.execute_script("window.scrollTo(3000, 6000);")
+        time.sleep(1)
         html = driver.page_source
         soup = BeautifulSoup(html, "html.parser")
         # 각 책의 데이터 크롤링
@@ -145,39 +149,27 @@ def aladin_crawling():
         title = soup.select_one('.Ere_bo_title').get_text()
         onlinePrice = soup.select_one('.Ere_fs24').get_text()
         author = soup.select_one('.tlist > ul > li:nth-of-type(3) > a').get_text()
-        # author_detail = soup.select_one('.introduction_nopic > div > a').get_text()
-        # # author_detail1 = soup.find('div', {'class': 'introduction_nopic'})
-        # # author_detail1 = soup.find('div', {'class': 'introduction'})
-        # if author_detail == None:
-        #     author_detail = soup.find('div', {'class': 'introduction'})
-        #     print("a")
-        # print("b")
-        # print(type(author_detail))
-        # author_detail1 = soup.find_all('div', {'class': 'introduction_nopic'})
-        # if author_detail1 == None:
-        #     print("a")
-            # author_detail1 = soup.find_all('div', {'class':'introduction'})
-
+        try: 
+            element = soup.select_one('.introduction_nopic')
+            if element is not None:
+                author_detail = element.get_text()
+        except AttributeError:
+            try:
+                element = soup.select_one('.introduction > div:nth-child(1) > a')
+                if element is not None:
+                    author_detail = element.get_text()
+            except AttributeError:
+                element = soup.select_one('.introduction')
+                if element is not None:
+                    author_detail = element.get_text()
         
-        # print(type(author_detail1))
-        # print(dir(author_detail1[0]))
-
-        author_detail1 = soup.select_one('div.introduction_nopic > div > a').get_text()
-        
-
-        
-        
-
-
-        # print(type(author_detail1))
-        # author_detail2 = author_detail1.find_all('div')[0]
-        # # author_detail3 = author_detail2.find_all('a')[0].text
-        # print('bb')
-        # print(author_detail3)
-        # print(author_detail3.text)
-        
-        print('cc')
-
+        # try:
+        #     author_detail = soup.select_one('.introduction_nopic').get_text()
+        # except:
+        #     try:
+        #         author_detail = soup.select_one('.introduction > div:nth-child(1) > a').get_text()
+        #     except:
+        #         author_detail = soup.select_one('.introduction').get_text()
         if '(옮긴이)' in soup.select_one('.tlist > ul > li:nth-of-type(3)').get_text():
             publisher = soup.select_one('.tlist > ul > li:nth-of-type(3) > a:nth-of-type(3)').get_text()
         else:
@@ -191,7 +183,7 @@ def aladin_crawling():
         print(title)
         print(onlinePrice)
         print(author)
-        print(author_detail1)
+        print(author_detail)
         print(publisher)
         print(store)
         print(store_rank)
